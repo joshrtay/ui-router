@@ -10,10 +10,10 @@ angular.module('parallel', ['ui.router']);
 //                       /PARALLEL
 //                      / resolve
 //    root.notabs      /
-//     /              /                PARALLEL    
+//     /              /                PARALLEL
 //  root --- root.tabs --------------- root.tabs.deep -- root.tabs.deep.deep  -- root.tabs.deep.iii.deep -- root.tabs.deep.iii.deep.nest
-//               |   \                              
-//               |    \                              
+//               |   \
+//               |    \
 //               |     \
 //               |      \            root.tabs.subtabs.S1
 //               |       \                /   PARALLEL
@@ -165,6 +165,7 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
     url: '/:id'
   });
 
+
   // This state is the second parallel state tab.  It has deeply nested non-parallel states.  It takes a parameter.
   // Again, we define "parallel: true" and provide a named view, to plug into the parent template's ui-view.
   $stateProvider.state('root.tabs.deep', {
@@ -183,6 +184,9 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
                 '<br><a ui-sref-active="active" ui-sref=".deep">deep.deep (deep nested states)</a>' +
                 '<div id="root_tabs_S2_ui-view" ui-view>Nothing Loaded</div>'
       }
+    },
+    resolve: {
+
     },
     scope: true,
     parallel: true,
