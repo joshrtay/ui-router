@@ -147,7 +147,6 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
         ]
       }
     },
-    scope: true,
     parallel: true, // Parallel state indicator on the state definition
     url: '/people'
   });
@@ -188,7 +187,6 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
     resolve: {
 
     },
-    scope: true,
     parallel: true,
     url: '/deep/:id'
   });
@@ -228,7 +226,6 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
                 '<br><input ng-model="data" type="text"><br>{{data}}'
       }
     },
-    scope: true,
     parallel: true,
     url: '/s1'
   });
@@ -243,7 +240,6 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
                 '<br>{{data}}'
       }
     },
-    scope: true,
     parallel: true,
     url: '/s2'
   });
@@ -284,7 +280,6 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
                 '<br><input ng-model="data" type="text">{{data}}'
       }
     },
-    scope: true,
     parallel: true,
     url: '/s1'
   });
@@ -298,7 +293,6 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
                 '<br><input ng-model="data" type="text">{{data}}'
       }
     },
-    scope: true,
     parallel: true,
     url: '/s2'
   });
