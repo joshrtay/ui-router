@@ -91,9 +91,9 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
             // Here is where we set up the 4 tab controls (the UI for selecting tabs), and use parallel-state-controls
             // to switch to the last known active substate when each tab is clicked.
             '<ul class="tabs" parallel-state-controls>' +
-            '   <li ng-class="{ active: $state.includes(\'root.tabs.people\') }" parallel-state-selector=".people">people (Parallel + stateParameter)</li>' +
+            '   <li ng-class="{ active: $state.includes(\'root.tabs.people\') }" parallel-state-selector=".people">people (Parallel)</li>' +
             '   <li ng-class="{ active: $state.includes(\'root.tabs.subtabs\') }" parallel-state-selector=".subtabs">subtabs (Parallel)</span>' +
-            '   <li ng-class="{ active: $state.includes(\'root.tabs.deep\') }" parallel-state-selector=".deep">deep nest (Parallel)</span>' +
+            '   <li ng-class="{ active: $state.includes(\'root.tabs.deep\') }" parallel-state-selector=".deep">deep nest (Parallel + state param)</span>' +
             '   <li ng-class="{ active: $state.includes(\'root.tabs.outersubtabs\') }" parallel-state-selector=".outersubtabs">outersubtabs (Not parallel)</span>' +
             '</ul>' +
 
