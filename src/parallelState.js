@@ -1,15 +1,17 @@
 $ParallelStateProvider.$inject = [ '$injector' ];
-function $ParallelStateProvider($injector) {
+function $ParallelStateProvider($injector, $rootScope) {
   var inactiveStates = {}; // state.name -> { locals: .., stateParams: .., ownParams: .. }
   var parallelStates = {}; // state.name -> active/inactive
+  var deepStates = {};
 
   this.registerParallelState = function(state) {
     parallelStates[state.name] = false;
+    if (state.deepStateRedirect) deepStates[state.name] = state.name;
   };
 
-  this.$get = function () {
+  this.$get = [ '$rootScope', function ($rootScope) {
     return parallelSupport;
-  };
+  }];
 
   var parallelSupport = {
     isChangeInParallelUniverse: function (view, evt, toState) {

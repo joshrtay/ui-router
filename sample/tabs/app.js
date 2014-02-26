@@ -148,6 +148,7 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
       }
     },
     parallel: true, // Parallel state indicator on the state definition
+    deepStateRedirect: true,
     url: '/people'
   });
 
@@ -188,6 +189,7 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
 
     },
     parallel: true,
+    deepStateRedirect: true,
     url: '/deep/:id'
   });
 
@@ -214,6 +216,7 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
       }
     },
     parallel: true,
+    deepStateRedirect: true,
     url: '/subtabs'
   });
 
@@ -227,6 +230,7 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
       }
     },
     parallel: true,
+    deepStateRedirect: true,
     url: '/s1'
   });
 
@@ -241,6 +245,7 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
       }
     },
     parallel: true,
+    deepStateRedirect: true,
     url: '/s2'
   });
 
@@ -281,6 +286,7 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
       }
     },
     parallel: true,
+    deepStateRedirect: true,
     url: '/s1'
   });
 
@@ -294,6 +300,7 @@ angular.module('parallel').config([ '$stateProvider', '$urlRouterProvider', func
       }
     },
     parallel: true,
+    deepStateRedirect: true,
     url: '/s2'
   });
 
